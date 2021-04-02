@@ -48,6 +48,7 @@ public class addGoods extends JFrame {
 	 * Create the application.
 	 */
 	public addGoods() {
+		setTitle("addGoods");
 		initialize();
 	}
 
@@ -74,8 +75,40 @@ public class addGoods extends JFrame {
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				File goods = new File("Goods");
+				File goods = new File("products.txt");
 				try {
+			          if (Kind.equals("fruit")) {
+			        	  File file1 = new File("fruit.txt");
+			              FileWriter fw1 = new FileWriter(file1,true);
+			              BufferedWriter bw1 = new BufferedWriter(fw1);
+			              bw1.write(Kind.toString());
+			              bw1.newLine();
+			              bw1.close();
+			          }
+			          if (Kind.equals("drinks")) {
+			        	  File file2 = new File("drinks.txt");
+			              FileWriter fw2 = new FileWriter(file2,true);
+			              BufferedWriter bw2 = new BufferedWriter(fw2);
+			              bw2.write(Kind.toString());
+			              bw2.newLine();
+			              bw2.close();
+			          }
+			          if (Kind.equals("meat")) {
+			        	  File file3 = new File("meat.txt");
+			              FileWriter fw3 = new FileWriter(file3,true);
+			              BufferedWriter bw3 = new BufferedWriter(fw3);
+			              bw3.write(Kind.toString());
+			              bw3.newLine();
+			              bw3.close();
+			          }
+			          if (Kind.equals("spices")) {
+			        	  File file4 = new File("spices.txt");
+			              FileWriter fw4 = new FileWriter(file4,true);
+			              BufferedWriter bw4 = new BufferedWriter(fw4);
+			              bw4.write(Kind.toString());
+			              bw4.newLine();
+			              bw4.close();
+			          }	
 				FileWriter fw = new FileWriter(goods, true);
 				BufferedWriter bufferedWriter = new BufferedWriter(fw);
 				bufferedWriter.write("\n" + Name.getText() + "\t" + Kind.getText() + "\t" + Num.getText() + "\t" + Price.getText());
@@ -98,7 +131,7 @@ public class addGoods extends JFrame {
 		JButton btnNewButton_1 = new JButton("Back");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Login.main(null);
+				homePage.main(null);
 			}
 		});
 		btnNewButton_1.setFont(new Font("Times New Roman", Font.PLAIN, 18));
