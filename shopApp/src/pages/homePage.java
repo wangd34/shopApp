@@ -131,9 +131,7 @@ public class homePage {
 		});
 		searchB.setBounds(24, 43, 117, 29);
 		homePageFrame.getContentPane().add(searchB);
-		
-		
-		
+	
 	}
 	
 
