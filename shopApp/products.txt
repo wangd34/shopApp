@@ -1,0 +1,5 @@
+kiwi	fruit	3	10
+asd	asd	as	asa
+asd	fruit	asd	aa
+1	fruit	1	1
+1	fruit	1	1

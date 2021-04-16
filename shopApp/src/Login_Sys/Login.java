@@ -16,8 +16,10 @@ import javax.swing.JPasswordField;
 import javax.swing.UIManager;
 
 import Register_Sys.Register;
+import functionalities.addGoods;
 import pages.homePage;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -25,6 +27,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.awt.event.ActionEvent;
+import javax.swing.JComboBox;
 
 public class Login {
 
@@ -81,20 +84,20 @@ public class Login {
 		frmLogin.getContentPane().add(separator);
 		
 		JLabel lblUserName = new JLabel("User Name");
-		lblUserName.setBounds(52, 82, 88, 16);
+		lblUserName.setBounds(52, 60, 88, 16);
 		frmLogin.getContentPane().add(lblUserName);
 		
 		JLabel lblPassword = new JLabel("Password");
-		lblPassword.setBounds(52, 135, 61, 16);
+		lblPassword.setBounds(52, 101, 61, 16);
 		frmLogin.getContentPane().add(lblPassword);
 		
 		txtUserName = new JTextField();
-		txtUserName.setBounds(192, 77, 190, 26);
+		txtUserName.setBounds(192, 56, 190, 26);
 		frmLogin.getContentPane().add(txtUserName);
 		txtUserName.setColumns(10);
 		
 		txtPassword = new JPasswordField();
-		txtPassword.setBounds(192, 130, 190, 26);
+		txtPassword.setBounds(192, 96, 190, 26);
 		frmLogin.getContentPane().add(txtPassword);
 		
 		JSeparator separator_1 = new JSeparator();
@@ -104,23 +107,47 @@ public class Login {
 		separator_1.setBounds(0, 179, 450, 16);
 		frmLogin.getContentPane().add(separator_1);
 		
+
+		JComboBox id = new JComboBox();
+		id.setBounds(249, 140, 143, 27);
+		id.setModel(new DefaultComboBoxModel(new String[] {"Customer", "Administrator", "Guest"}));
+		frmLogin.getContentPane().add(id);
+		
 		JButton btnLogin = new JButton("LogIn");
 		readInFile();
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String UN = txtUserName.getText();
-				String PSWD = txtPassword.getText();
-				
+				String PSWD = txtPassword.getText();				
 				boolean match = match(UN, PSWD);
-				if(match) {
+				if(id.getSelectedItem().equals("Customer")) {
+					if(match) {
+						txtUserName.setText(null);
+						txtPassword.setText(null);
+						frmLogin.dispose();
+						homePage.main(null);
+					} else {
+						JOptionPane.showMessageDialog(null, "Invalid Account", "Login Error", JOptionPane.ERROR_MESSAGE);
+						txtUserName.setText(null);
+						txtPassword.setText(null);
+					}
+				} else if(id.getSelectedItem().equals("Administrator")) {
+					if(match) {
+						txtUserName.setText(null);
+						txtPassword.setText(null);
+						frmLogin.dispose();
+						addGoods.main(null);
+					} else {
+						JOptionPane.showMessageDialog(null, "Invalid Account", "Login Error", JOptionPane.ERROR_MESSAGE);
+						txtUserName.setText(null);
+						txtPassword.setText(null);
+					}
+				}
+				else {
 					txtUserName.setText(null);
 					txtPassword.setText(null);
 					frmLogin.dispose();
 					homePage.main(null);
-				} else {
-					JOptionPane.showMessageDialog(null, "Invalid Account", "Login Error", JOptionPane.ERROR_MESSAGE);
-					txtUserName.setText(null);
-					txtPassword.setText(null);
 				}
 			}
 		});
@@ -144,8 +171,12 @@ public class Login {
 				txtPassword.setText(null);
 			}
 		});
-		btnReset.setBounds(52, 217, 117, 29);
+		btnReset.setBounds(51, 217, 117, 29);
 		frmLogin.getContentPane().add(btnReset);
+		
+		JLabel lblNewLabel = new JLabel("Login as");
+		lblNewLabel.setBounds(192, 134, 69, 33);
+		frmLogin.getContentPane().add(lblNewLabel);
 	}
 	
 	public void readInFile() {
