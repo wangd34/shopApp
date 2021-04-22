@@ -86,37 +86,37 @@ public class addGoods extends JFrame {
 			              FileWriter fw1 = new FileWriter(file1,true);
 			              BufferedWriter bw1 = new BufferedWriter(fw1);
 //			              bw1.write("\n" + Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());
-			              bw1.write(Name.getText());
 			              bw1.newLine();
+			              bw1.write(Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());
 			              bw1.close();
 			          }
 			          if (Kind.getText().equals("drinks")) {
 			        	  File file2 = new File("drinks");
 			              FileWriter fw2 = new FileWriter(file2,true);
 			              BufferedWriter bw2 = new BufferedWriter(fw2);
-			              bw2.write(Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());
 			              bw2.newLine();
+			              bw2.write(Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());			              
 			              bw2.close();
 			          }
 			          if (Kind.getText().equals("meat")) {
 			        	  File file3 = new File("meat");
 			              FileWriter fw3 = new FileWriter(file3,true);
 			              BufferedWriter bw3 = new BufferedWriter(fw3);
-			              bw3.write(Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());
 			              bw3.newLine();
+			              bw3.write(Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());			             
 			              bw3.close();
 			          }
-			          if (Kind.getText().equals("spices")) {
-			        	  File file4 = new File("spices");
+			          if (Kind.getText().equals("spicy")) {
+			        	  File file4 = new File("spicies");
 			              FileWriter fw4 = new FileWriter(file4,true);
 			              BufferedWriter bw4 = new BufferedWriter(fw4);
-			              bw4.write(Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());
 			              bw4.newLine();
+			              bw4.write(Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());			              
 			              bw4.close();
 			          }	
 				FileWriter fw = new FileWriter(goods, true);
 				BufferedWriter bufferedWriter = new BufferedWriter(fw);
-				bufferedWriter.write(Name.getText() + "\t" + Kind.getText() + "\t" + Num.getText() + "\t" + Price.getText() + "\n");
+				bufferedWriter.write("\n" + Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());
 				bufferedWriter.close();
 				Name.setText(null);
 				Kind.setText(null);
