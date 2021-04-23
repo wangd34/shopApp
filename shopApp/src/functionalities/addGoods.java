@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import Function.Products;
 import Login_Sys.Login;
 
 import javax.swing.JTextField;
@@ -25,6 +26,9 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
 
 public class addGoods extends JFrame {
 	private JTextField Name;
@@ -59,7 +63,7 @@ public class addGoods extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public void initialize() {
+	public void initialize(){
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 100, 848, 468);
 		getContentPane().setLayout(null);
@@ -80,43 +84,39 @@ public class addGoods extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				File goods = new File("products.txt");
+				Products p = new Products(Name.getText(), Kind.getText(), Double.parseDouble(Num.getText()), Double.parseDouble(Price.getText()));
 				try {
-			          if (Kind.getText().equals("fruit")) {
-			        	  File file1 = new File("fruit");
-			              FileWriter fw1 = new FileWriter(file1,true);
-			              BufferedWriter bw1 = new BufferedWriter(fw1);
-//			              bw1.write("\n" + Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());
-			              bw1.newLine();
-			              bw1.write(Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());
-			              bw1.close();
+					if (Kind.getText().equals("fruit")) {
+						File file2 = new File("fruit");
+			            FileWriter fw2 = new FileWriter(file2,true);
+			            BufferedWriter bw2 = new BufferedWriter(fw2);						
+						bw2.write(p.appendP() + "\n");
+						bw2.close();
 			          }
-			          if (Kind.getText().equals("drinks")) {
+			          if (Kind.getText().equals("drinks")) {		        	  
 			        	  File file2 = new File("drinks");
-			              FileWriter fw2 = new FileWriter(file2,true);
-			              BufferedWriter bw2 = new BufferedWriter(fw2);
-			              bw2.newLine();
-			              bw2.write(Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());			              
-			              bw2.close();
+			        	  FileWriter fw2 = new FileWriter(file2,true);
+			        	  BufferedWriter bw2 = new BufferedWriter(fw2);
+			        	  bw2.write(p.appendP() + "\n");
+			        	  bw2.close();
 			          }
 			          if (Kind.getText().equals("meat")) {
-			        	  File file3 = new File("meat");
-			              FileWriter fw3 = new FileWriter(file3,true);
-			              BufferedWriter bw3 = new BufferedWriter(fw3);
-			              bw3.newLine();
-			              bw3.write(Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());			             
-			              bw3.close();
+			        	  File file2 = new File("meat");
+			        	  FileWriter fw2 = new FileWriter(file2,true);
+			        	  BufferedWriter bw2 = new BufferedWriter(fw2);
+			        	  bw2.write(p.appendP() + "\n");
+			        	  bw2.close();
 			          }
 			          if (Kind.getText().equals("spicy")) {
-			        	  File file4 = new File("spicies");
-			              FileWriter fw4 = new FileWriter(file4,true);
-			              BufferedWriter bw4 = new BufferedWriter(fw4);
-			              bw4.newLine();
-			              bw4.write(Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());			              
-			              bw4.close();
+			        	  File file2 = new File("spicy");
+				          FileWriter fw2 = new FileWriter(file2,true);
+				          BufferedWriter bw2 = new BufferedWriter(fw2);
+				          bw2.write(p.appendP() + "\n");
+				          bw2.close();
 			          }	
 				FileWriter fw = new FileWriter(goods, true);
 				BufferedWriter bufferedWriter = new BufferedWriter(fw);
-				bufferedWriter.write("\n" + Name.getText() + "\t" + Num.getText() + "\t" + Price.getText());
+				bufferedWriter.write(p.appendP() + "\n");
 				bufferedWriter.close();
 				Name.setText(null);
 				Kind.setText(null);

@@ -1,10 +1,8 @@
-salt	150	2.99
-soy	199	1.99
-blackpaper	99	0.99
-apple	20	5
-coconut	20	3
-lemon	14	14
-tep-water	10	2
-pork	30	2
-beef	12	12
-blueberry	200	1.23
+apple	fruit	10.00	12.00
+cocunut	fruit	10.00	10.00
+lemon	fruit	10.00	10.00
+wine	drinks	10.00	10.00
+beer	drinks	20.00	20.00
+salt	spicy	10.00	10.00
+beef	meat	10.00	10.00
+fish	meat	20.00	20.00
