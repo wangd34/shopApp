@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="zehuadeMacBook-Pro.local" name="Login_Sys.LoginTester" skipped="0" tests="1" time="0.0" timestamp="2021-04-16T07:34:57">
+  <properties>
+    <property name="ant.library.dir" value="/Users/zehuawang/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946/lib" />
+    <property name="socksProxyHost" value="127.0.0.1" />
+    <property name="http.proxyHost" value="127.0.0.1" />
+    <property name="java.specification.version" value="15" />
+    <property name="ant.project.name" value="BTK" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="java.class.path" value="/Users/zehuawang/Desktop/CSE271/eclipse-workspace/BTK/bin:/Users/zehuawang/.p2/pool/plugins/org.junit_4.13.0.v20200204-1500.jar:/Users/zehuawang/.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar:/Users/zehuawang/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946/lib/ant-launcher.jar:/Users/zehuawang/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946/lib/ant.jar:/Users/zehuawang/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946/lib/ant-junit.jar:/Users/zehuawang/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946/lib/ant-junit4.jar" />
+    <property name="env.HOME" value="/Users/zehuawang" />
+    <property name="https.proxyPort" value="4780" />
+    <property name="source" value="15" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="debuglevel" value="source,lines,vars" />
+    <property name="env.JAVA_STARTED_ON_FIRST_THREAD_12528" value="1" />
+    <property name="java.vendor.url" value="https://java.oracle.com/" />
+    <property name="java.vm.specification.version" value="15" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="env.JAVA_STARTED_ON_FIRST_THREAD_12842" value="1" />
+    <property name="user.country" value="CN" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.boot.library.path" value="/Users/zehuawang/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_15.0.1.v20201027-0507/jre/lib" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner Login_Sys.LoginTester skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/zehuawang/Desktop/CSE271/eclipse-workspace/BTK/junit/TEST-Login_Sys.LoginTester.xml crashfile=/Users/zehuawang/Desktop/CSE271/eclipse-workspace/BTK/junitvmwatcher4884680104200276310.properties propsfile=/Users/zehuawang/Desktop/CSE271/eclipse-workspace/BTK/junit7456370640094323952.properties" />
+    <property name="http.nonProxyHosts" value="192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|127.0.0.1|localhost|*.localhost|local|*.local" />
+    <property name="jdk.debug" value="release" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="user.home" value="/Users/zehuawang" />
+    <property name="user.language" value="en" />
+    <property name="eclipse.pdebuild.templates" value="/Users/zehuawang/Desktop/JavaWeb/Eclipse.app/Contents/Eclipse/../../../../../.p2/pool/plugins/org.eclipse.pde.build_3.10.900.v20201111-1557/templates" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="java.version.date" value="2020-10-20" />
+    <property name="java.home" value="/Users/zehuawang/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_15.0.1.v20201027-0507/jre" />
+    <property name="basedir" value="/Users/zehuawang/Desktop/CSE271/eclipse-workspace/BTK" />
+    <property name="https.proxyHost" value="127.0.0.1" />
+    <property name="file.separator" value="/" />
+    <property name="ant.file.type.BTK" value="file" />
+    <property name="java.vm.compressedOopsMode" value="Zero based" />
+    <property name="eclipse.pdebuild.home" value="/Users/zehuawang/Desktop/JavaWeb/Eclipse.app/Contents/Eclipse/../../../../../.p2/pool/plugins/org.eclipse.pde.build_3.10.900.v20201111-1557/." />
+    <property name="line.separator" value="&#xa;" />
+    <property name="ant.java.version" value="15" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="env.Apple_PubSub_Socket_Render" value="/private/tmp/com.apple.launchd.Mcgaayk2Sd/Render" />
+    <property name="env.ANT_HOME" value="/Users/zehuawang/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946" />
+    <property name="env.XPC_SERVICE_NAME" value="org.eclipse.platform.ide.36428" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="ftp.nonProxyHosts" value="192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|127.0.0.1|localhost|*.localhost|local|*.local" />
+    <property name="java.runtime.version" value="15.0.1+9-18" />
+    <property name="user.name" value="zehuawang" />
+    <property name="ant.file" value="/Users/zehuawang/Desktop/CSE271/eclipse-workspace/BTK/build.xml" />
+    <property name="env.PATH" value="/usr/bin:/bin:/usr/sbin:/sbin" />
+    <property name="path.separator" value=":" />
+    <property name="os.version" value="10.14.6" />
+    <property name="ant.file.BTK" value="/Users/zehuawang/Desktop/CSE271/eclipse-workspace/BTK/build.xml" />
+    <property name="env.LOGNAME" value="zehuawang" />
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
+    <property name="env.XPC_FLAGS" value="0x0" />
+    <property name="env.__CF_USER_TEXT_ENCODING" value="0x1F5:0x0:0x0" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="ant.project.invoked-targets" value="LoginTester" />
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM" />
+    <property name="env.SHELL" value="/bin/bash" />
+    <property name="ant.core.lib" value="/Users/zehuawang/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946/lib/ant.jar" />
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/" />
+    <property name="java.io.tmpdir" value="/var/folders/wl/th178drj3hx_mvz1f8b1tnfc0000gn/T/" />
+    <property name="java.version" value="15.0.1" />
+    <property name="user.dir" value="/Users/zehuawang/Desktop/CSE271/eclipse-workspace/BTK" />
+    <property name="env.SSH_AUTH_SOCK" value="/private/tmp/com.apple.launchd.zMC9dIFCOd/Listeners" />
+    <property name="os.arch" value="x86_64" />
+    <property name="socksProxyPort" value="4781" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="ant.home" value="/Users/zehuawang/.p2/pool/plugins/org.apache.ant_1.10.9.v20201106-1946" />
+    <property name="env.APP_ICON_12528" value="../Resources/Eclipse.icns" />
+    <property name="junit.output.dir" value="junit" />
+    <property name="target" value="15" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.10.9 compiled on September 27 2020" />
+    <property name="eclipse.pdebuild.scripts" value="/Users/zehuawang/Desktop/JavaWeb/Eclipse.app/Contents/Eclipse/../../../../../.p2/pool/plugins/org.eclipse.pde.build_3.10.900.v20201111-1557/scripts" />
+    <property name="env.TMPDIR" value="/var/folders/wl/th178drj3hx_mvz1f8b1tnfc0000gn/T/" />
+    <property name="java.library.path" value="/Users/zehuawang/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="java.vm.version" value="15.0.1+9-18" />
+    <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+    <property name="env.JAVA_MAIN_CLASS_12842" value="org.eclipse.ant.internal.launching.remote.InternalAntRunner" />
+    <property name="socksNonProxyHosts" value="192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|127.0.0.1|localhost|*.localhost|local|*.local" />
+    <property name="env.USER" value="zehuawang" />
+    <property name="java.class.version" value="59.0" />
+    <property name="http.proxyPort" value="4780" />
+    <property name="ant.project.default-target" value="build" />
+  </properties>
+  <error message="Login_Sys.LoginTester" type="java.lang.ClassNotFoundException">java.lang.ClassNotFoundException: Login_Sys.LoginTester
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:606)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:168)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:468)
+</error>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

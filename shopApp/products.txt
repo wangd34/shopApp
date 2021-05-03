@@ -1,19 +1,8 @@
-kiwi	fruit	3	10
-asd	asd	as	asa
-asd	fruit	asd	aa
-1	fruit	1	1
-1	fruit	1	1
-pineapple	fruit	3	3
-pineapple	friut	3	3
-pinneapple	fruit	2	2
-apple	fruit	3	3
-apple	fruit		
-apple	fruit		
-apple	fruit		
-pineapple 			
-pineapple	fruit		
-pear	fruit		
-kiwi	fruit		
-apple	friut	5	4
-apple	fruit	1	1
-apple 	fruit	3	3
+apple	fruit	10.00	12.00
+cocunut	fruit	10.00	10.00
+lemon	fruit	10.00	10.00
+wine	drinks	10.00	10.00
+beer	drinks	20.00	20.00
+salt	spicy	10.00	10.00
+beef	meat	10.00	10.00
+fish	meat	20.00	20.00

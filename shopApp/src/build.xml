@@ -40,7 +40,7 @@
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
-            <fileset dir="src">
+            <fileset dir="bin">
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -54,13 +54,13 @@
     <target depends="init" name="build-project">
         <echo message="${ant.project.name}: ${ant.file}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
-            <src path="src"/>
+            <src path="bin"/>
             <classpath refid="BTK.classpath"/>
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
     <target name="addGoods">
-        <java classname="functionalities.addGoods" failonerror="true" fork="yes">
+        <java classname="functionalities.addGoods" failonerror="false" fork="yes">
             <classpath refid="run.addGoods.classpath"/>
         </java>
     </target>
@@ -74,22 +74,22 @@
         </junit>
     </target>
     <target name="Login">
-        <java classname="Login_Sys.Login" failonerror="true" fork="yes">
+        <java classname="Login_Sys.Login" failonerror="false" fork="yes">
             <classpath refid="run.Login.classpath"/>
         </java>
     </target>
     <target name="Register (1)">
-        <java classname="Register_Sys.Register" failonerror="true" fork="yes">
+        <java classname="Register_Sys.Register" failonerror="false" fork="yes">
             <classpath refid="run.Register (1).classpath"/>
         </java>
     </target>
     <target name="homePage">
-        <java classname="pages.homePage" failonerror="true" fork="yes">
+        <java classname="pages.homePage" failonerror="false" fork="yes">
             <classpath refid="run.homePage.classpath"/>
         </java>
     </target>
     <target name="Register">
-        <java classname="Register" failonerror="true" fork="yes">
+        <java classname="Register" failonerror="false" fork="yes">
             <classpath refid="run.Register.classpath"/>
         </java>
     </target>
@@ -101,4 +101,12 @@
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
     </target>
+	<target name="run" depends="compile">
+		<java classname="homePage">
+			<classpath path="src"/>
+		</java>
+	</target>	
+	<target name="compile">
+		<javac includeantruntime="false" srcdir="./src" destdir="bin" />
+		</target>
 </project>
