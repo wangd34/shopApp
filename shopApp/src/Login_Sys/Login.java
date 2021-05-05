@@ -180,7 +180,7 @@ public class Login {
 	}
 	
 	public void readInFile() {
-		File file = new File("Account");
+		File file = new File("accounts.txt");
 		try {
 			Scanner in = new Scanner(file);
 			while(in.hasNextLine()) {

@@ -143,7 +143,7 @@ public class Register {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(txtpassword.getText().equals(txtconfirm.getText())) {
-					File acc = new File("Account");
+					File acc = new File("accounts.txt");
 				try {
 				if(!acc.exists()) {
 					acc.createNewFile();
